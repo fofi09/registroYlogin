@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Registro Empleados</title>
+    <style>
+        /* Estilos adicionales */
+        body {
+            /* background: linear-gradient(135deg, rgb(85, 155, 146), rgb(201, 200, 200), rgb(126, 193, 235)); */
+            background-color: white;
+            font-family: Arial, sans-serif; /* Fuente principal */
+        }
+
+        .form-container {
+            max-width: 500px; 
+            margin: auto; 
+            padding: 1.5rem; 
+            background: linear-gradient(135deg, rgb(85, 155, 146), white, rgb(126, 199, 244)); /* Color de fondo del formulario */
+            border-radius: 10px; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);  */
+            border: solid 1px rgb(255, 255, 255);
+
+        }
+
+        .form-container input {
+            width: 100%; /* Ancho completo para los campos de entrada */
+            padding: 0.5rem; /* Espaciado interno reducido de los campos de entrada */
+            margin-bottom: 0.75rem; /* Espaciado inferior reducido entre los campos */
+            border: 1px solid #ccc; /* Borde del campo de entrada */
+            border-radius: 5px; /* Bordes redondeados del campo de entrada */
+            font-size: 0.9rem; /* Tamaño de fuente reducido */
+            outline: none; /* Quitamos el contorno al hacer clic */
+        }
+
+        .form-container button {
+            width: 100%; 
+            padding: 0.75rem; 
+             background: linear-gradient(135deg, rgb(91, 164, 154), white, rgb(107, 196, 251));  
+            color: black; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 1rem; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease; 
+        }
+
+        .form-container button:hover {
+           background: linear-gradient(135deg, rgb(91, 164, 154), rgb(194, 194, 194), rgb(107, 196, 251));; /* Color de fondo del botón al pasar el cursor */
+            color: black; /* Cambiamos el color del texto al pasar el cursor */
+        }
+
+        .form-container span {
+            font-size: 0.9rem; 
+            color: #666; 
+        }
+
+        .form-container .text-bold {
+            font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="form-container">
+            <div class="flex flex-col justify-center p-6 md:p-10"> 
+                <span class="mb-2 text-3xl font-bold">Administrador autorizado para registrar un nuevo empleado</span> 
+                <span class="text-gray-400 mb-6 font-bold">Datos del nuevo empleado:</span> 
+                <div class="py-2"> 
+                    <span class="mb-1 text-sm">Nombre Completo:</span> 
+                    <input type="text"
+                           name="nombreEmpleado"
+                           id="nombre-empleado"
+                           class="placeholder-gray-500"
+                    />
+                </div>
+                <div class="py-2"> 
+                    <span class="mb-1 text-sm">Email:</span> 
+                    <input type="email"
+                           class="placeholder-gray-500"
+                           name="email"
+                           id="email"
+                    />
+                </div>
+                <div class="py-2"> 
+                    <span class="mb-1 text-sm">Contraseña:</span> 
+                    <input type="password"
+                           name="contraseña"
+                           id="contraseña"
+                           class="placeholder-gray-500"
+                    />
+                </div>
+                <div class="py-2"> <!-- Ajuste de espaciado vertical -->
+                    <span class="mb-1 text-sm">Repetir contraseña:</span> <!-- Ajuste de tamaño de texto -->
+                    <input type="password"
+                           name="contraseña"
+                           id="contraseña"
+                           class="placeholder-gray-500"
+                    />
+                </div>
+                <button class="w-full bg-black text-white p-2 rounded-lg mt-4 hover:bg-white hover:text-black hover:border hover:border-gray-300"> <!-- Ajuste de margen superior -->
+                    Registrar Empleado
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
